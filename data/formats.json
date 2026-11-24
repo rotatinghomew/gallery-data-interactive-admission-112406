@@ -1,0 +1,88 @@
+{
+  "tables": {
+    "days": [
+      "day",
+      "venue",
+      "shift",
+      "policy",
+      "plan_received",
+      "close"
+    ],
+    "groups": [
+      "group",
+      "day",
+      "source",
+      "size",
+      "route",
+      "request_min",
+      "slot_start",
+      "arrival_min",
+      "receipt"
+    ],
+    "device_use": [
+      "group",
+      "stage",
+      "device",
+      "joined",
+      "started",
+      "end",
+      "state",
+      "source"
+    ],
+    "interruptions": [
+      "day",
+      "device",
+      "start",
+      "end",
+      "received",
+      "status",
+      "reason"
+    ],
+    "observation": [
+      "day",
+      "scope",
+      "first",
+      "last",
+      "status"
+    ],
+    "bookings": [
+      "booking",
+      "day",
+      "route",
+      "size",
+      "windows",
+      "status",
+      "fallback_ack",
+      "received"
+    ]
+  },
+  "references": [
+    [
+      "days",
+      "day",
+      "groups",
+      "day"
+    ],
+    [
+      "groups",
+      "group",
+      "device_use",
+      "group"
+    ],
+    [
+      "days",
+      "day",
+      "observation",
+      "day"
+    ]
+  ],
+  "agreement_keys": [
+    "clock",
+    "stations",
+    "tickets",
+    "review",
+    "plans",
+    "upcoming",
+    "records"
+  ]
+}

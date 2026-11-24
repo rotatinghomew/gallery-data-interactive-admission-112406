@@ -1,0 +1,103 @@
+{
+  "clock": {
+    "unit": "分钟",
+    "origin": "日内第一档开馆",
+    "sale_observable": "开售决策仅见收到时不晚于该刻的资料",
+    "interval": "左闭右开"
+  },
+  "stations": {
+    "A1": {
+      "capacity": 6,
+      "route": "A"
+    },
+    "A2": {
+      "capacity": 4,
+      "route": "A"
+    },
+    "B1": {
+      "capacity": 6,
+      "route": "B"
+    },
+    "B2": {
+      "capacity": 4,
+      "route": "B"
+    },
+    "C1": {
+      "capacity": 6,
+      "route": "C"
+    },
+    "C2": {
+      "capacity": 4,
+      "route": "C"
+    }
+  },
+  "tickets": {
+    "AB": {
+      "valid": [
+        "A",
+        "B"
+      ],
+      "fallback": "AC",
+      "requires_acceptance": true
+    },
+    "AC": {
+      "valid": [
+        "A",
+        "C"
+      ],
+      "requires_acceptance": true
+    }
+  },
+  "review": {
+    "fit_days": [
+      "D001",
+      "D040"
+    ],
+    "holdout_days": [
+      "D041",
+      "D060"
+    ],
+    "max_error_by_holdout": 0.12,
+    "require_joint_service_probability": 0.9,
+    "reservation_min_by_route": 0.92,
+    "walk_in_long_wait_minutes": 9,
+    "walk_in_long_wait_max": 0.22,
+    "tail_allowed_groups": 2,
+    "tail_limit_probability": 0.15
+  },
+  "plans": [
+    {
+      "name": "固定份额",
+      "walk_in_fraction": 0.22
+    },
+    {
+      "name": "进度释放",
+      "walk_in_fraction": 0.22,
+      "released_only_after": "可确认交还并留足后续展项"
+    }
+  ],
+  "upcoming": {
+    "days": [
+      "W101",
+      "W102"
+    ],
+    "admission_slots": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "variants": [
+      "AB",
+      "AC"
+    ],
+    "last_admission": 24,
+    "observation_ends": 48
+  },
+  "records": {
+    "D": "历史营业日",
+    "W": "规划营业日",
+    "group_size": "设备同一时刻共同占用的席数",
+    "downtime_end_empty": "尚未恢复并待派修"
+  }
+}

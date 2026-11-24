@@ -1,0 +1,6 @@
+booking,day,route,size,windows,status,fallback_ack,received
+B11,W101,AB,5,5|10,已确认,待,-8
+B12,W101,AC,4,10|15,已确认,无,-4
+B13,W101,AB,4,15|20,拟确认,待,0
+B14,W101,AB,3,10|15,拟确认,待,1
+B15,W102,AC,5,15|20,已确认,待,-9
